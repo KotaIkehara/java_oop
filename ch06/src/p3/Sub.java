@@ -5,7 +5,7 @@ public class Sub extends Obj {
 
 	public void print() {
 		Obj o = new Obj();
-		//System.out.println(o.number);
+		System.out.println(o.number);
 	}
 
 }

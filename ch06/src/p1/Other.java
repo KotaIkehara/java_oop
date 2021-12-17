@@ -6,3 +6,4 @@ public class Other {
 		System.out.println(o.number);
 	}
 }
+ 
