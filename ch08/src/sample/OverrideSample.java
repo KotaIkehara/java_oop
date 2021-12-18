@@ -8,7 +8,6 @@ class First {
 class Second extends First {
 	@Override
 	public Second create() {		// protected First ⇒ public Second と変更
-
 		return new Second();		// Secondクラスのインスタンスを返す
 	}
 
