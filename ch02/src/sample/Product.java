@@ -1,7 +1,7 @@
 package sample;
 import java.time.LocalDate;
 
-public class Product {
+public class Product implements Comparable<Product> {
 	private String number;		// 型番
 	private String name;		// 品名
 	private int price;			// 価格
@@ -21,13 +21,14 @@ public class Product {
 		int total = price * quantity;	// 価格 × 個数
 		return total;					// 総額を返す
 	}
+
 	public boolean isHighPrice(int p) {
 		if(price > p) {
 			return true;
 		}
 		return false;
 	}
-	
+
 	public String getNumber() {
 		return number;
 	}
@@ -72,5 +73,10 @@ public class Product {
 	public String toString() {
 		return "Product [number=" + number + ", name=" + name + ", "
 				+ "price=" + price + ", date=" + date + ", stock=" + stock + "]";
+	}
+
+	@Override
+	public int compareTo(Product p) {
+		return number.compareTo(p.number);
 	}
 }
