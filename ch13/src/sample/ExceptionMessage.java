@@ -4,9 +4,11 @@ public class ExceptionMessage {
 		try {
 			method();
 		} catch (Exception e) {
-			System.out.println(e.getMessage());// 例外メッセージを表示
+			//			System.out.println(e.getMessage());// 例外メッセージを表示
+			e.printStackTrace();
 		}
 	}
+
 	public static void method() throws Exception {
 		throw new Exception("★例外が発生しました"); // メッセージ付き例外を投げる
 	}

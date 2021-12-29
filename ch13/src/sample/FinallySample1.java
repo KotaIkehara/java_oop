@@ -1,18 +1,17 @@
 package sample;
 
 public class FinallySample1 {
-	
+
 	public static void main(String[] args) {
 		try {
-			System.out.println("start");	
+			System.out.println("start");
 			throw new ArithmeticException();
-		}
-		catch(ArithmeticException e) {
+			//			throw new NullPointerException();
+		} catch (ArithmeticException e) {
 			System.out.println("catch");
-		}
-		finally {
+		} finally {
 			System.out.println("finally");
 		}
-		System.out.println("end");		
+		System.out.println("end");
 	}
 }
